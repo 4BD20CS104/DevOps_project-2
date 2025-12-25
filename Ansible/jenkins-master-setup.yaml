@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: add jenkins key
-    apt-key:
+    apt_key:
       url: https://pkg.jenkins.io/debian/jenkins.io-2026.key
       state: present
 
@@ -14,7 +14,7 @@
 
   - name: install java
     apt:
-      name: openjdk-11-jre
+      name: openjdk-17-jre
       state: present
 
   - name: install jenkins
